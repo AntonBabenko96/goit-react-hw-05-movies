@@ -45,7 +45,7 @@ export const SearchMovies = () => {
         ? !isLoading &&
           searchMovies.length === 0 && (
             <p>
-              No results found for "{search}". Please enter a valid search term.
+              Немає резулятатів по запиту "{search}". Введіть коректне значення.
             </p>
           )
         : ''}

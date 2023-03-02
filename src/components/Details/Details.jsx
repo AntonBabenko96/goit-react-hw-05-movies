@@ -36,11 +36,16 @@ export const Details = () => {
       </button>
       <div className={css.component}>
         {isLoading && <Loader />}
-        <img
-          src={`https://image.tmdb.org/t/p/w500${poster_path}`}
-          alt={original_title}
-          className={css.poster}
-        />
+        {poster_path ? (
+          <img
+            src={`https://image.tmdb.org/t/p/w500${poster_path}`}
+            alt={original_title}
+            className={css.poster}
+          />
+        ) : (
+          ''
+        )}
+
         <div>
           <h2 className={css.title}>{original_title}</h2>
           <p className={css.date}>{release_date}</p>

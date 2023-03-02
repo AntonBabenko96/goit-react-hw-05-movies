@@ -26,7 +26,7 @@ export const Reviews = () => {
   return (
     <div>
       {isLoading && <Loader />}
-      {reviews.length > 0 && (
+      {reviews.length > 0 ? (
         <ul className={css.reviewsItem}>
           {reviews.map(({ author, content, id }) => {
             return (
@@ -37,6 +37,8 @@ export const Reviews = () => {
             );
           })}
         </ul>
+      ) : (
+        'Ще не написали жодної рецензії'
       )}
     </div>
   );

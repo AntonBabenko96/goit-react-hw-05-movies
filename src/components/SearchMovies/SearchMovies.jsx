@@ -51,7 +51,7 @@ export const SearchMovies = () => {
         : ''}
       <ul className={css.moviesList}>
         {searchMovies.map(({ title, id, poster_path }) => {
-          if (!title) return null;
+          if (!title || !poster_path) return null;
           return (
             <li key={id} className={css.posterList}>
               <Link

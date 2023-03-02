@@ -1,0 +1,19 @@
+.btnLink {
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+    margin-top: 30px;
+}
+
+
+.btn {
+text-decoration: none;
+color: black;
+width: 60px;
+
+    border: 1px solid black;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}

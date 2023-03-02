@@ -1,0 +1,18 @@
+.actors {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.actorsPhoto {
+    width: 100px;
+}
+
+.actorsName {
+    font-size: 16px;
+}
+
+.actorsItem {
+    width: 120px;
+}

@@ -4,7 +4,7 @@ import { Loader } from 'shared/Loader/Loader';
 import { API } from '../../shared/api';
 import css from './Reviews.module.css';
 
-export const Reviews = () => {
+const Reviews = () => {
   const [reviews, setReviews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
@@ -38,8 +38,10 @@ export const Reviews = () => {
           })}
         </ul>
       ) : (
-        'Ще не написали жодної рецензії'
+        'No reviews have been written yet.'
       )}
     </div>
   );
 };
+
+export default Reviews;

@@ -4,7 +4,7 @@ import { Loader } from 'shared/Loader/Loader';
 import { API } from '../../shared/api';
 import css from './Cast.module.css';
 
-export const Cast = () => {
+const Cast = () => {
   const [castMovie, setCastMovie] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
@@ -46,7 +46,9 @@ export const Cast = () => {
               );
             }
           )
-        : 'Упс! Напевно цей фільм не має акторів)'}
+        : 'Oooopsss! Probably the movie has no actors'}
     </ul>
   );
 };
+
+export default Cast;

@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { Loader } from 'shared/Loader/Loader';
 import { API } from '../../shared/api';
 import { Link } from 'react-router-dom';
-import { SearchBar } from 'components/SearchBar/SearchBar';
+import SearchBar from 'components/SearchBar/SearchBar';
 import css from './SearchMovies.module.css';
 import { useSearchParams, useLocation } from 'react-router-dom';
 
-export const SearchMovies = () => {
+const SearchMovies = () => {
   const [searchMovies, setSearchMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -38,14 +38,15 @@ export const SearchMovies = () => {
   };
 
   return (
-    <>
+    <div className="section">
       <SearchBar onSubmit={updateSearchHandler} />
       {isLoading && <Loader />}
       {search
         ? !isLoading &&
           searchMovies.length === 0 && (
             <p>
-              Немає резулятатів по запиту "{search}". Введіть коректне значення.
+              There are no results for the request "{search}". Enter the correct
+              one value.
             </p>
           )
         : ''}
@@ -70,6 +71,8 @@ export const SearchMovies = () => {
           );
         })}
       </ul>
-    </>
+    </div>
   );
 };
+
+export default SearchMovies;

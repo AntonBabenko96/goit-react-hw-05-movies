@@ -1,8 +1,8 @@
-import { Details } from 'components/Details/Details';
+import Details from 'components/Details/Details';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import css from './MovieDetailsPage.module.css';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const location = useLocation();
   const { from } = location.state;
   return (
@@ -24,3 +24,4 @@ export const MovieDetails = () => {
     </div>
   );
 };
+export default MovieDetails;

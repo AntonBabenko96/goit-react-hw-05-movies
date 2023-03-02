@@ -1,5 +1,5 @@
-import { Trending } from '../../components/Trending/Trending';
-export const HomePage = () => {
+import  Trending  from '../../components/Trending/Trending';
+ const HomePage = () => {
   return (
     <div className="section">
       <h2>Tranding for a week</h2>
@@ -7,3 +7,5 @@ export const HomePage = () => {
     </div>
   );
 };
+
+export default HomePage;

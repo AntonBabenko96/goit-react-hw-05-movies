@@ -4,7 +4,7 @@ import { Loader } from 'shared/Loader/Loader';
 import { API } from '../../shared/api';
 import css from './Details.module.css';
 
-export const Details = () => {
+const Details = () => {
   const [details, setDetails] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const { movieId } = useParams();
@@ -56,3 +56,5 @@ export const Details = () => {
     </>
   );
 };
+
+export default Details;

@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { Loader } from 'shared/Loader/Loader';
 import css from '../Trending/Trending.module.css';
 
-export const Trending = () => {
+const Trending = () => {
   const [state, setState] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const location = useLocation();
@@ -50,3 +50,5 @@ export const Trending = () => {
     </ul>
   );
 };
+
+export default Trending;

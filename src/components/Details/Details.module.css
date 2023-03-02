@@ -13,4 +13,7 @@ font-size: 20px;
 }
 .buttonBack {
     margin: 15px 15px 15px 0;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
 }
